@@ -13,7 +13,8 @@ workflows:
 
 jobs:
   build-and-test:
-    executor: cimg/node:15.1
+    docker:
+      - image: cimg/node:15.1
     # Checkout the code as the first step.
     # The node orb's install-packages step will install the dependencies from a package.json
     # Then run your tests!
